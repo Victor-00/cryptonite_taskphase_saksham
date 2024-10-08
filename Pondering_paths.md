@@ -3,9 +3,9 @@ The description of the challenge told that the path of a file or folder starting
 
 The commands :-
 
-` hacker@paths~the-root:~$ /pwn 
-BOOM!!!
-Here is your flag:
+` hacker@paths~the-root:~$ /pwn\n 
+BOOM!!!\n
+Here is your flag:\n
 pwn.college{s4v0hQFNVRd-pMLQUxhNByBEz5D.dhzN5QDLwIjN0czW} `
 
 - - -
