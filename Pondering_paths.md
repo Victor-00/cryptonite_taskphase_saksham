@@ -2,7 +2,6 @@
 The description of the challenge told that the path of a file or folder starting from root directory to that file or folder is called the absolute path. The challenge asked to run 'pwn' from absolute path so i did that to get the flag.
 
 The commands :-
-
 ` hacker@paths~the-root:~$ /pwn `<br/> 
 ` BOOM!!! `<br/>
 ` Here is your flag: `<br/>
