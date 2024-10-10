@@ -21,5 +21,6 @@ The commands :- <br/>
 ## Position thy self
 The challenge told me to run /challenge/run from a specific path which it will tell after i try to run it which i did , it told me to run it from root directory. i did cd / to go into root directory and then ran /challenge/run which gave me the flag.
 
-The commands :- 
+The commands :-
+
 ![image](https://i.imgur.com/LqbTpAq.png)
