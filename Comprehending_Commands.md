@@ -15,3 +15,16 @@ The commands :- <br/>
 `pwn.college{k2GYO3AdGrWwS9ujAylMAryoa6X.dlTM5QDLwIjN0czW}`<br/>
 
 - - -
+
+### Challenge 3
+Here we need to retrieve the __flag__ file from its absolute path.
+```
+You cannot use the 'cd' command in this level, and must retrieve the flag by 
+absolute path. Plus, I hid the flag in a different directory! You can find it 
+in the file /lib/lsb/init-functions.d/flag. Go cat it out **without** cding 
+into that directory!
+hacker@commands~more-catting-practice:~$ cat /lib/lsb/init-functions.d/flag 
+pwn.college{Ede2fI9-Z0oABaBqW0gQG3HGdtW.dBjM5QDLwIjN0czW}
+```
+
+- - -
