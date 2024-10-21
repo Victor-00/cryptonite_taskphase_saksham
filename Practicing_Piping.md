@@ -230,6 +230,13 @@ pwn.college{85q8euF1ozhLqxWd3NH6W0aflDs.dFjM5QDL1IzN0czW}
 
 
 ```
+hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >(/challenge/the) >(/challenge/planet) 
+This secret data must directly and simultaneously make it to /challenge/the and 
+/challenge/planet. Don't try to copy-paste it; it changes too fast.
+2395492261041785
+Congratulations, you have duplicated data into the input of two programs! Here 
+is your flag:
+pwn.college{E1n0FtqNYLlNaV1b2fzcJtUUIeN.dBDO0UDLwIjN0czW}
 
 ```
 
@@ -237,5 +244,8 @@ pwn.college{85q8euF1ozhLqxWd3NH6W0aflDs.dFjM5QDL1IzN0czW}
 
 
 ```
-
+hacker@piping~split-piping-stderr-and-stdout:~$ /challenge/hack > >(/challenge/planet) 2> >(/challenge/the)
+Congratulations, you have learned a redirection technique that even experts 
+struggle with! Here is your flag:
+pwn.college{YEYDxu4FrV_E4mWJoqjkQxOYEMd.dFDNwYDLwIjN0czW}
 ```
