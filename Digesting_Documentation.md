@@ -1,5 +1,3 @@
-# Module 4: Digesting Documentation
-
 ### Challenge 1: Learning from Documentation.
 We learn the appropriate use of __arguments__ while running the `/challenge/challenge` program.
 ```
