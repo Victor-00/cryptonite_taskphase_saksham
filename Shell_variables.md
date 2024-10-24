@@ -1,4 +1,7 @@
 ## printing variables
+Learnt about the `echo` command which is used to print out stuff on screen.<br>
+It can also print variables by using `$` before their name.<br>
+In this challenge the flag was in the variable named `FLAG` and I had to print it out using `echo` command. <br>
 
 ```
 hacker@variables~printing-variables:~$ echo $FLAG
@@ -7,6 +10,10 @@ pwn.college{QOKeclEtd3jaQaK93JKIO5wYF76.ddTN1QDLwIjN0czW}
 - - -
 
 ## setting variables
+Learnt how to assign values to variables in shell.<br>
+`var=1337` note: there should not be a gap after or before `=` or else the shell will treat each segment as a different command.<br>
+I also had a doubt regarding the assignment of string values.<br>
+The doubt was do i assign the value with a `""` or just normally.<br>
 
 ```
 hacker@variables~setting-variables:~$ PWN=COLLEGE
@@ -16,6 +23,10 @@ pwn.college{8H_G--H5mXeD0lfOUhbXgAvBsM-.dlTN1QDLwIjN0czW}
 - - -
 
 ## Multi-word variables
+Learnt the usecase of `" "` and how it can be used to store multiple words inside a variable.<br>
+This helps the shell recognize the string inside the `" "` as a single token rather than seperate commands.<br>
+Then I used this as instructed by the challenge to get the flag.<br>
+
 
 ```
 hacker@variables~multi-word-variables:~$ PWN="COLLEGE YEAH"
@@ -25,6 +36,9 @@ pwn.college{c46-9MXymbUnwgM7RrX9gUeXVHG.dBjN1QDLwIjN0czW}
 - - -
 
 ## Exporting variables
+Learnt about scope of variables in shell.<br>
+Learnt how by default when variables are created, they are not inherited by the child of the main shell.<br>
+we have to use the `export command` to export them to the child shell.<br>
 
 ```
 hacker@variables~exporting-variables:~$ export PWN=COLLEGE
@@ -43,6 +57,7 @@ You've set the COLLEGE variable to the proper value!
 - - -
 
 ## Printing exported variables
+This was a short challenge and learnt about the `env` command that can be used to read all the exported variables and then `FLAG` can be looked through them.<br>
 
 ```
 hacker@variables~printing-exported-variables:~$ env
@@ -65,6 +80,10 @@ _=/run/workspace/bin/env
 - - -
 
 ## Storing command output
+We can store outputs of a command inside variables using `$()`.<br>
+This is known as `Command Substitution`.<br>
+Older format was using ` ` but this is not advised as it can cause problems in nesting.<br>
+In this challenge we had to store the output of `/challenge/run` in a variable called `PWN` and then print it to obtain the flag.<br>
 
 ```
 hacker@variables~storing-command-output:~$ PWN=$(/challenge/run)
@@ -76,6 +95,9 @@ pwn.college{cswGwJ3hlUjJ9ix049FGzPFyzr_.dVzN0UDLwIjN0czW}
 - - -
 
 ## reading input
+In this challenge learnt about the `read` builtin which helps us take input in some variable.<br>
+`-p` aregument can be used to show a message.<br>
+To obtain the flag i just had to read `COLLEGE` into a variable named `PWN`.<br>
 
 ```
 hacker@variables~reading-input:~$ read PWN
@@ -86,6 +108,18 @@ pwn.college{sq8vkUaSccHwUi5Q3T0i9XZVjt4.dhzN1QDLwIjN0czW}
 - - -
 
 ## reading output
+we can directly redirect the content of some file in a variable by using 
+`var=$(cat file)`, but this is not the most efficient way.<br>
+The more efficient way would be to `var < some file` to directly read it in `var`.<br>
+
+```
+hacker@variables~reading-files:~$ read /challenge/read_me < PWN
+ssh-entrypoint: read: `/challenge/read_me': not a valid identifier
+hacker@variables~reading-files:~$ read PWN < /challenge/read_me
+You've set the PWN variable properly! As promised, here is the flag:
+pwn.college{IO4PtqkQLS20pi1Q9BjAk89im2M.dBjM4QDLwIjN0czW}
+```
+
 
 ```
 hacker@variables~reading-files:~$ read /challenge/read_me < PWN
